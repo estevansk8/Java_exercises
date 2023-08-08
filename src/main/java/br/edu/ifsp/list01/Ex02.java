@@ -22,13 +22,38 @@ public class Ex02 {
 
     public static void main(String[] args) {
         //Leia o input
+        Scanner sc = new Scanner(System.in);
+
+        //os valores devem ser recebidos separados por espaço
+        int lado1 = sc.nextInt();
+        int lado2 = sc.nextInt();
+        int lado3 = sc.nextInt();
+
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
+        Ex02 ex02 = new Ex02();
+
         //Escreva o resultado da chamada do método compute() aqui
+        System.out.println(ex02.compute(lado1, lado2, lado3));
     }
 
-    String compute(int a, int b, int c) {
-        String output = null;
-        //put your logic here
-        return output;
+    String compute(int lado1, int lado2, int lado3) {
+        //verifica se os numeros são validos
+        if (lado1 <= 0 || lado2 <= 0 || lado3 <= 0){
+            return "Erro";
+        }
+        else {
+            //verifica se é realmente um triangulo
+            if (lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2 || lado2 + lado3 <= lado1) return "Nao forma triangulo";
+
+                //escaleno
+            if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3 ) return "Escaleno";
+                //equilatero
+            if (lado1 == lado2 && lado1 == lado3 && lado2 == lado3 ) return "Equilatero";
+            else{
+                return "Isosceles";
+            }
+
+
+        }
     }
 }

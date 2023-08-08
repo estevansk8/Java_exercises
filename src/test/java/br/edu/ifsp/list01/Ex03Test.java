@@ -12,6 +12,6 @@ class Ex03Test {
     "1900,Ano nao bissexto", "2020,Ano bissexto", "100,Ano nao bissexto", "0,Erro"})
     void testCompute(int input, String expected){
         Ex03 sut = new Ex03();
-        assertThat(sut.compute(input)).isEqualTo(expected);
+        assertThat(sut.compute(String.valueOf(input))).isEqualTo(expected);
     }
 }
