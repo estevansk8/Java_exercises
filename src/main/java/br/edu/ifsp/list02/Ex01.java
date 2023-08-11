@@ -14,16 +14,38 @@ package br.edu.ifsp.list02;
     Qualquer valor fora do domínio de entrada tem como saída esperada a String "Erro".
 */
 
+import java.util.Scanner;
+
 public class Ex01 {
+    static final int DAYS_IN_WEEK = 7;
     public static void main(String[] args) {
         //Leia o input
+        int[] temperatures = new int[DAYS_IN_WEEK];
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < temperatures.length ; i++) {
+            temperatures[i] = sc.nextInt();
+        }
+
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
+        final Ex01 ex01 = new Ex01();
         //Escreva o resultado da chamada do método compute() aqui
+        System.out.println(ex01.compute(temperatures));
     }
 
-    int compute(int[] input) {
-        int output = 0;
+    int compute(int[] temperatures) {
+        int TemperaturesAboveAverage = 0;
         //put your logic here
-        return output;
+        double sumOfTemperatures = 0;
+
+        for (int temperature : temperatures) {
+            sumOfTemperatures += temperature;
+        }
+        final double meanOfTemperatures = sumOfTemperatures / DAYS_IN_WEEK;
+
+        for (int i: temperatures) {
+            if (i > meanOfTemperatures) TemperaturesAboveAverage++;
+        }
+
+        return TemperaturesAboveAverage;
     }
 }

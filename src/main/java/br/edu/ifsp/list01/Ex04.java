@@ -46,13 +46,6 @@ public class Ex04 {
 
         return chocolates;
 
-        // Logica errada: como não fazer
 
-        /*//quantos chocolates ele comprou
-        int chocolates_comprados = (int) Math.floor(n/c);
-        //quantos chocolates ele troca
-        int papeis_trocados_por_chocolate = (int) Math.floor()
-        //cada chocolate é um papel
-        int total_papeis = compra +*/
     }
 }

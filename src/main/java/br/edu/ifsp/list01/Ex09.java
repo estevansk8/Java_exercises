@@ -14,7 +14,7 @@ package br.edu.ifsp.list01;
     | -------             | ------         |
     | 10 20 30 80 -1      | 35.00 3 25.00% |
     | 25 30 45 -1         | 33.33 3 0.00%  |
-    => Exercício gentilmente cedido pelos profs. Jorge Cutigi (IFSP/SCL) e Adenilso Simão (ICMC/USP)
+    =>Exercício gentilmente cedido pelos profs. Jorge Cutigi (IFSP/SCL) e Adenilso Simão (ICMC/USP)
 */
 public class Ex09 {
 
