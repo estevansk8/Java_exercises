@@ -39,7 +39,7 @@ public class Ex08 {
         //put your logic here
         int contador = 0;
         int preco_total = 0;
-        while (contador <= quantidade){
+        while (contador < quantidade){
             if (contador < preco) preco_total += preco - contador;
             if (contador >= preco) preco_total += 1;
             contador++;
