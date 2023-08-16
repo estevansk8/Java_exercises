@@ -50,9 +50,9 @@ public class Ex09 {
             if (idade > 75) pessoasIdosas += 1;
             totalDePessoas += 1;
         }
-        double mediaDeIdade = somaDasIdades / totalDePessoas;
+        double mediaDeIdade = (double) somaDasIdades / totalDePessoas;
 
-        double porcentagemPessoasIdosas = pessoasIdosas * 100 / totalDePessoas;
+        double porcentagemPessoasIdosas = (double) pessoasIdosas * 100 / totalDePessoas;
 
         //tratando como a média vai ser exibida
         String media_com_dois_decimais = String.format("%.2f", mediaDeIdade);
@@ -67,5 +67,8 @@ public class Ex09 {
 
         return mediaDeIdade_formatada_com_ponto + " " + stringmaioresDeIdade + " " + porcentagemPessoasIdosasComDoisDecimaisComPonto + "%";
 
+        //Expected :"46.50 5 16.67%"
+        //Show: 46.00 5 16.00 %
+        //But say that: Actual is: "39.00 5 14.00%"-
     }
 }

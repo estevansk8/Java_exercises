@@ -1,5 +1,7 @@
 package br.edu.ifsp.list01;
 
+import java.util.Scanner;
+
 /*
     Você está na Austrália treinando cangurus para se locomoverem em linha reta. Você quer saber se dois cangurus
     estarão na mesma posição em um determinado tempo, dado a posição inicial de cada canguru e qual a distância que
@@ -27,13 +29,23 @@ package br.edu.ifsp.list01;
 public class Ex10 {
     public static void main(String[] args) {
         //Leia o input
+        Scanner sc = new Scanner(System.in);
+
+        final int posicaoInicialCanguru1 = sc.nextInt();
+        final int distanciaDoPulo1 = sc.nextInt();
+        final int posicaoInicialCanguru2 = sc.nextInt();
+        final int distaciaDoPulo2 = sc.nextInt();
+
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
+        Ex10 ex10 = new Ex10();
+
         //Escreva o resultado da chamada do método compute() aqui
+        System.out.println(ex10.compute(posicaoInicialCanguru1,distanciaDoPulo1,posicaoInicialCanguru2,distaciaDoPulo2));
     }
 
     String compute(int x1, int v1, int x2, int v2) {
-        String output = null;
-        //put your logic here
-        return output;
+        //put your logic here~;;
+        if (v1 > v2 && ((x2 - x1) % (v1 - v2) == 0)) return "SIM";
+        return "NAO";
     }
 }
